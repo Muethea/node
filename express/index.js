@@ -12,10 +12,25 @@
 //   console.log(`Rodando na porta ${port}`)
 // })
 
-var obj = {
-  greet: 'hello'
+// const test = require('./test')
+
+// var obj = {
+//   greet: 'hello'
+// }
+
+// var prop = 'gret'
+
+// console.log(test)
+
+function Person(firtname, lastname) {
+  this.firtname = firtname
+  this.lastname = lastname
 }
 
-var prop = 'gret'
+Person.prototype.greet = function () {
+  console.log('Hello ' + this.firtname + ' ' + this.lastname)
+}
 
-console.log(obj[prop])
+var fernando = new Person('Fernando', 'Muethea')
+
+fernando.greet()
