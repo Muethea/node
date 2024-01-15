@@ -36,14 +36,7 @@ var fernando = new Person('Fernando', 'Muethea')
 fernando.greet()
 
 // JSON
-const data = {
-  firstname: 'Fernando',
-  lastname: 'Muethea',
-  address: {
-    street: '25 de Setembro.',
-    city: 'New York',
-    state: 'NY'
-  }
-}
 
-console.log(data)
+var greetings = require('./data.json')
+
+console.log(greetings.firstname)
