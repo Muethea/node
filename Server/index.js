@@ -1,5 +1,4 @@
 var http = require('http')
-var fs = require('fs')
 
 var port = 1337
 
