@@ -1,0 +1,11 @@
+:root {
+  --titulo: rgb(207, 95, 20);
+}
+
+h1 {
+  color: var(--titulo);
+}
+
+.titulo {
+  color: slateblue;
+}
