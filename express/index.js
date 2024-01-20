@@ -1,42 +1,11 @@
-// const express = require('express')
+const express = require('express')
+const fs = require('fs')
+const app = express()
 
-// const app = express()
+const port = process.env.PORT || 3000
+app.use('/assets', express.static(__dirname+'/public'))
+app.get('/', (req, res) => {
+  res.send('<h1 >Hello Word</h1>')
+})
 
-// const port = 3000
-
-// app.get('/', (req, res) => {
-//   res.send('Ola Mundo')
-// })
-
-// app.listen(port, () => {
-//   console.log(`Rodando na porta ${port}`)
-// })
-
-// const test = require('./test')
-
-// var obj = {
-//   greet: 'hello'
-// }
-
-// var prop = 'gret'
-
-// console.log(test)
-
-function Person(firtname, lastname) {
-  this.firtname = firtname
-  this.lastname = lastname
-}
-
-Person.prototype.greet = function () {
-  console.log('Hello ' + this.firtname + ' ' + this.lastname)
-}
-
-var fernando = new Person('Fernando', 'Muethea')
-
-fernando.greet()
-
-// JSON
-
-var greetings = require('./data.json')
-
-console.log(greetings.firstname)
+app.listen(port, console.log(`Rodando na porta ${port}`))
