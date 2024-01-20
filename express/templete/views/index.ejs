@@ -7,6 +7,11 @@
   </head>
   <body>
     <h1>Hello word</h1>
-    <p>Person: <%= ID %></p></p>
+
+    <form action="/person" method="post">
+      <input type="text" id="firstname" name="firstname" />
+      <input type="text" id="lastname" name="lastname" />
+      <input type="submit" value="enviar" />
+    </form>
   </body>
 </html>
